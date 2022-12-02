@@ -3,7 +3,7 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import { accessValueThroughString } from "../../utils/accessValueThroughString";
 
-export const ScrollableTableBody = React.memo((props) => {
+export const ScrollableTableBody = React.memo(({ rows, columns }) => {
   return (
     <>
       {rows.data.map((row) => {
