@@ -1,11 +1,14 @@
-import { css } from '@emotion/react';
+import { css } from "@emotion/react";
 
 export const GlobalStyle = css`
   :root {
-    --background: #FFFFFF;
+    --background: #d3d3d3;
+    --light-gray: #bbbbbb;
+    --medium-gray: #9b9b9b;
   }
 
   html {
+    scroll-behavior: smooth;
     height: calc(var(--vh, 1vh) * 100);
     @media (max-width: 1080px) {
       font-size: 93.75%;
@@ -17,7 +20,7 @@ export const GlobalStyle = css`
   }
 
   * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,8 +39,17 @@ export const GlobalStyle = css`
     cursor: pointer;
   }
 
+  button,
+  form,
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+  }
+
   [disabled] {
     opacity: 0.5;
     cursor: default;
   }
-`
+`;
