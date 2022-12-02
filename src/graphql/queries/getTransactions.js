@@ -5,12 +5,14 @@ export const GET_TRANSACTIONS = gql`
     $reference: String
     $category: String
     $startDate: String
+    $endDate: String
     $page: Int
   ) {
     transactions(
       reference: $reference
       category: $category
       startDate: $startDate
+      endDate: $endDate
       page: $page
     ) {
       nodes {
