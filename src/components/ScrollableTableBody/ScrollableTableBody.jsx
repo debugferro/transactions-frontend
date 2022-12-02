@@ -1,8 +1,9 @@
+import React from "react";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import { accessValueThroughString } from "../../utils/accessValueThroughString";
 
-export function ScrollableTableBody({ columns, rows }) {
+export const ScrollableTableBody = React.memo((props) => {
   return (
     <>
       {rows.data.map((row) => {
@@ -30,4 +31,4 @@ export function ScrollableTableBody({ columns, rows }) {
       })}
     </>
   );
-}
+})
