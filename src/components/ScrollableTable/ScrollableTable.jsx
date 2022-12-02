@@ -18,23 +18,22 @@ import { ScrollableTableBody } from "../ScrollableTableBody/ScrollableTableBody"
 import { tableContainerCSS } from "./ScrollableTable.styles";
 import { ElementObservabilityContext } from "../../contexts/ElementObservabilityContext";
 
+const defaultScroll = () => { };
 function ScrollableTable({
   columns,
   rows,
   isAllowedToFetch,
-  onScroll,
+  onScroll = defaultScroll,
   page = 1,
 }) {
   const { elementRef, isVisible } = useContext(ElementObservabilityContext);
-  const defaultScroll = () => { };
   const tableEl = useRef();
-  const loadMore = useCallback(onScroll || defaultScroll, [rows]);
 
   const scrollListener = useCallback(() => {
     if (isVisible && isAllowedToFetch) {
-      loadMore();
+      onScroll();
     }
-  }, [isAllowedToFetch, loadMore, isVisible]);
+  }, [isAllowedToFetch, onScroll, isVisible]);
 
   useLayoutEffect(() => {
     const tableRef = tableEl.current;
