@@ -24,3 +24,11 @@ Remember to run `docker-compose down` after using it.
 On the main page, there is a list of transactions with an infinite scroll. Filtering the table's content by reference, date, and category is possible.
 Clicking on one of the rows will be shown the details page, where it is possible to see all the data and change the transaction's category.
 
+## 🏗️ Built with:
+- JavaScript
+- React 18.2
+- Apollo Client
+- Emotion
+- Material UI
+- React Router Dom
+
