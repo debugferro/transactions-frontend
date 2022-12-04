@@ -95,7 +95,7 @@ function Transaction() {
                   <span>Category</span>
                 </InformationTitle>
                 <div>
-                  <IconButton aria-label="edit" onClick={openDialog}>
+                  <IconButton aria-label="edit category" onClick={openDialog}>
                     <EditIcon />
                   </IconButton>
                   <ColorfulPill color={transaction.category.color}>
@@ -114,6 +114,7 @@ function Transaction() {
             </div>
             <Footer>
               <Button
+                aria-label="return to previous page"
                 variant="contained"
                 startIcon={<ArrowBackIcon />}
                 onClick={() => navigate(-1)}
