@@ -43,15 +43,15 @@ export function EditDialog({ open, onClose }) {
           }}
         >
           {categoriesOpts.map((opt) => (
-            <MenuItem key={`c_${opt.value}_${opt.label}`} value={opt.value}>
+            <MenuItem aria-label="select categories" key={`c_${opt.value}_${opt.label}`} value={opt.value}>
               {opt.label}
             </MenuItem>
           ))}
         </TextField>
       </DialogContent>
       <DialogActions>
-        <Button onClick={(e) => onClose(e, "cancel")}>Cancel</Button>
-        <Button onClick={(e) => onClose(e, "submit", outputData)}>Edit</Button>
+        <Button aria-label="cancel edit mode" onClick={(e) => onClose(e, "cancel")}>Cancel</Button>
+        <Button aria-label="confirm edit changes"onClick={(e) => onClose(e, "submit", outputData)}>Edit</Button>
       </DialogActions>
     </Dialog>
   );
