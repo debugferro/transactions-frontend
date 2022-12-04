@@ -62,8 +62,8 @@ function TransactionsTable() {
     useContext(TransactionsContext);
 
   const transactionsData = data().transactions
-  const transactions = transactionsData.nodes;
-  const hasNextPage = transactionsData.pageInfo.hasNextPage;
+  const transactions = transactionsData?.nodes;
+  const hasNextPage = transactionsData?.pageInfo.hasNextPage;
 
   const doFetchMore = () => {
     setPage(page + 1);
@@ -98,7 +98,7 @@ function TransactionsTable() {
               data: transactions,
               props: {
                 css: { cursor: "pointer" },
-                onClick: (e, row) => navigate(`/transactions/${row.id}`),
+                onClick: (_e, row) => navigate(`/transactions/${row.id}`),
               },
             }}
             isAllowedToFetch={!loading && hasNextPage}
