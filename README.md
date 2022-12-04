@@ -26,8 +26,8 @@ Clicking on one of the rows will be shown the details page, where it is possible
 
 ## 🏗️ Built with:
 - JavaScript
-- React 18.2
-- Apollo Client
+- React v18.2
+- Apollo Client v3
 - Emotion
 - Material UI
 - React Router Dom
